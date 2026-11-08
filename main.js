@@ -1,7 +1,7 @@
-
 /* =========================================
    ATEEZ WORLD — JAVASCRIPT PRINCIPAL
 ========================================= */
+
 
 /* INTEGRANTES */
 
@@ -11,6 +11,7 @@ const members = [
         name: "Hongjoong",
         role: "Líder • Rapper • Produtor",
         description: "Capitão do ATEEZ e participante da criação musical.",
+        birthday: "07/11/1998",
         image: "assets/HongJoong.jpg"
     },
     {
@@ -18,6 +19,7 @@ const members = [
         name: "Seonghwa",
         role: "Vocalista • Performer",
         description: "Conhecido pela presença de palco e versatilidade.",
+        birthday: "03/04/1998",
         image: "assets/Seonghwa.jpg"
     },
     {
@@ -25,6 +27,7 @@ const members = [
         name: "Yunho",
         role: "Performer • Vocalista",
         description: "Destaque em dança, performance e energia no palco.",
+        birthday: "23/03/1999",
         image: "assets/Yunho.jpg"
     },
     {
@@ -32,6 +35,7 @@ const members = [
         name: "Yeosang",
         role: "Vocalista • Performer",
         description: "Conhecido por sua presença marcante.",
+        birthday: "15/06/1999",
         image: "assets/Yeosang.jpg"
     },
     {
@@ -39,6 +43,7 @@ const members = [
         name: "San",
         role: "Vocalista • Performer",
         description: "Reconhecido pela intensidade de suas performances.",
+        birthday: "10/07/1999",
         image: "assets/San.jpg"
     },
     {
@@ -46,6 +51,7 @@ const members = [
         name: "Mingi",
         role: "Rapper • Performer",
         description: "Conhecido pela voz grave e estilo marcante.",
+        birthday: "09/08/1999",
         image: "assets/MINGI.jpg"
     },
     {
@@ -53,6 +59,7 @@ const members = [
         name: "Wooyoung",
         role: "Performer • Vocalista",
         description: "Destaque por sua expressividade e carisma.",
+        birthday: "26/11/1999",
         image: "assets/Wooyoung.jpg"
     },
     {
@@ -60,6 +67,7 @@ const members = [
         name: "Jongho",
         role: "Vocalista",
         description: "Conhecido por sua potência vocal.",
+        birthday: "12/10/2000",
         image: "assets/Johngo.jpg"
     }
 ];
@@ -69,6 +77,7 @@ const memberGrid = document.querySelector("#memberGrid");
 if (memberGrid) {
     memberGrid.innerHTML = members.map(member => `
         <article class="member-card">
+
             <img
                 class="member-image"
                 src="${member.image}"
@@ -77,10 +86,22 @@ if (memberGrid) {
             >
 
             <div class="member-info">
+
                 <span class="member-number">${member.number}</span>
+
                 <h3>${member.name}</h3>
+
                 <p>${member.description}</p>
+
+                <div class="member-birthday">
+                    <span aria-hidden="true">🎂</span>
+                    <time>${member.birthday}</time>
+                </div>
+
+                <br>
+
                 <span class="member-role">${member.role}</span>
+
             </div>
         </article>
     `).join("");
@@ -93,56 +114,56 @@ const aniteez = [
     {
         name: "JJOONGrami",
         member: "Hongjoong",
-        image: "assets/aniteez/jjoongrami.jpg",
+        image: "aniteez/jjoongrami.jpg",
         description: "O mascote associado ao nosso capitão.",
         emoji: "🐿️"
     },
     {
         name: "DDEONGbyeoli",
         member: "Seonghwa",
-        image: "assets/aniteez/ddeongbyeoli.jpg",
+        image: "aniteez/ddeongbyeoli.jpg",
         description: "O amiguinho associado ao Seonghwa.",
         emoji: "🐰"
     },
     {
         name: "TYUdeongi",
         member: "Yunho",
-        image: "assets/aniteez/tyudeongi.jpg",
+        image: "aniteez/tyudeongi.jpg",
         description: "O mascote associado ao Yunho.",
         emoji: "🐶"
     },
     {
         name: "HETmongi",
         member: "Yeosang",
-        image: "assets/aniteez/hetmongi.jpg",
+        image: "aniteez/hetmongi.jpg",
         description: "O mascote associado ao Yeosang.",
         emoji: "🐶"
     },
     {
         name: "SANdeoki",
         member: "San",
-        image: "assets/aniteez/sandeoki.jpg",
+        image: "aniteez/sandeoki.jpg",
         description: "O mascote associado ao San.",
         emoji: "🐱"
     },
     {
         name: "bbyongMING",
         member: "Mingi",
-        image: "assets/aniteez/bbyongming.jpg",
+        image: "aniteez/bbyeongming.jpg",
         description: "O mascote amarelinho associado ao Mingi.",
         emoji: "🐥"
     },
     {
         name: "WOOYOnyang",
         member: "Wooyoung",
-        image: "assets/aniteez/wooyonyang.jpg",
+        image: "aniteez/wooyonyang.jpg",
         description: "O mascote associado ao Wooyoung.",
         emoji: "🐱"
     },
     {
         name: "JJONGbear",
         member: "Jongho",
-        image: "assets/aniteez/jjongbear.jpg",
+        image: "aniteez/jjongbear.jpg",
         description: "O mascote associado ao Jongho.",
         emoji: "🐻"
     }
@@ -153,6 +174,7 @@ const aniteezGrid = document.querySelector("#aniteezGrid");
 if (aniteezGrid) {
     aniteezGrid.innerHTML = aniteez.map(character => `
         <article class="aniteez-card">
+
             <img
                 class="aniteez-image"
                 src="${character.image}"
@@ -161,9 +183,13 @@ if (aniteezGrid) {
             >
 
             <div class="aniteez-info">
+
                 <h3>${character.name}</h3>
+
                 <p>${character.description}</p>
+
                 <span>${character.emoji} ${character.member}</span>
+
             </div>
         </article>
     `).join("");
@@ -198,12 +224,17 @@ const newsGrid = document.querySelector("#newsGrid");
 if (newsGrid) {
     newsGrid.innerHTML = news.map(item => `
         <article class="news-card">
+
             <time>${item.date}</time>
+
             <h3>${item.title}</h3>
+
             <p>${item.description}</p>
+
             <a href="${item.url}" target="_blank" rel="noopener noreferrer">
                 Consultar fonte →
             </a>
+
         </article>
     `).join("");
 }
@@ -247,6 +278,7 @@ const videos = [
 const videoGrid = document.querySelector("#videoGrid");
 
 function renderVideos(category = "todos") {
+
     if (!videoGrid) return;
 
     const filteredVideos = category === "todos"
@@ -255,8 +287,11 @@ function renderVideos(category = "todos") {
 
     videoGrid.innerHTML = filteredVideos.map(video => `
         <article class="video-card">
+
             <div class="video-art">▶</div>
+
             <h3>${video.title}</h3>
+
             <a
                 href="https://www.youtube.com/results?search_query=${encodeURIComponent(video.query)}"
                 target="_blank"
@@ -264,6 +299,7 @@ function renderVideos(category = "todos") {
             >
                 Encontrar no YouTube →
             </a>
+
         </article>
     `).join("");
 }
@@ -276,11 +312,19 @@ renderVideos();
 const filterButtons = document.querySelectorAll(".filter");
 
 filterButtons.forEach(button => {
+
     button.addEventListener("click", () => {
-        filterButtons.forEach(item => item.classList.remove("active"));
+
+        filterButtons.forEach(item => {
+            item.classList.remove("active");
+        });
+
         button.classList.add("active");
+
         renderVideos(button.dataset.category);
+
     });
+
 });
 
 
@@ -290,20 +334,31 @@ const menuToggle = document.querySelector("#menuToggle");
 const mainNav = document.querySelector("#mainNav");
 
 if (menuToggle && mainNav) {
+
     menuToggle.addEventListener("click", () => {
+
         const opened = mainNav.classList.toggle("open");
 
         menuToggle.setAttribute("aria-expanded", String(opened));
+
         menuToggle.textContent = opened ? "✕" : "☰";
+
     });
 
     mainNav.querySelectorAll("a").forEach(link => {
+
         link.addEventListener("click", () => {
+
             mainNav.classList.remove("open");
+
             menuToggle.setAttribute("aria-expanded", "false");
+
             menuToggle.textContent = "☰";
+
         });
+
     });
+
 }
 
 
@@ -331,10 +386,13 @@ let mode = "login";
 
 
 function openAccount(nextMode) {
+
     if (!dialog || !form) return;
 
     mode = nextMode;
+
     form.reset();
+
     message.textContent = "";
 
     const registering = mode === "register";
@@ -348,88 +406,144 @@ function openAccount(nextMode) {
         : "Acesse sua experiência no portal.";
 
     nameInput.classList.toggle("hidden", !registering);
+
     nameLabel.classList.toggle("hidden", !registering);
+
     nameInput.required = registering;
 
     submit.textContent = registering ? "Criar conta" : "Entrar";
 
     dialog.showModal();
+
 }
+
 
 if (login) {
-    login.addEventListener("click", () => openAccount("login"));
+
+    login.addEventListener("click", () => {
+        openAccount("login");
+    });
+
 }
 
+
 if (register) {
-    register.addEventListener("click", () => openAccount("register"));
+
+    register.addEventListener("click", () => {
+        openAccount("register");
+    });
+
 }
+
 
 const closeDialog = document.querySelector("#closeDialog");
 
 if (closeDialog && dialog) {
-    closeDialog.addEventListener("click", () => dialog.close());
+
+    closeDialog.addEventListener("click", () => {
+        dialog.close();
+    });
+
 }
 
 
 function updateAccount() {
+
     if (!greeting) return;
 
     const name = sessionStorage.getItem("ateezWorldDemoName");
 
     greeting.textContent = name ? `Olá, ${name}!` : "";
 
-    if (login) login.classList.toggle("hidden", Boolean(name));
-    if (register) register.classList.toggle("hidden", Boolean(name));
-    if (logout) logout.classList.toggle("hidden", !name);
+    if (login) {
+        login.classList.toggle("hidden", Boolean(name));
+    }
+
+    if (register) {
+        register.classList.toggle("hidden", Boolean(name));
+    }
+
+    if (logout) {
+        logout.classList.toggle("hidden", !name);
+    }
+
 }
 
 
 if (form) {
+
     form.addEventListener("submit", event => {
+
         event.preventDefault();
 
         if (passwordInput.value.length < 6) {
-            message.textContent = "A senha precisa ter pelo menos 6 caracteres.";
+
+            message.textContent =
+                "A senha precisa ter pelo menos 6 caracteres.";
+
             return;
+
         }
 
         if (mode === "register") {
+
             const name = nameInput.value.trim();
 
             if (!name) {
+
                 message.textContent = "Informe seu nome.";
+
                 return;
+
             }
 
             sessionStorage.setItem("ateezWorldDemoName", name);
-            message.textContent = `Cadastro demonstrativo concluído. Bem-vinda, ${name}!`;
+
+            message.textContent =
+                `Cadastro demonstrativo concluído. Bem-vinda, ${name}!`;
 
         } else {
+
             const name = sessionStorage.getItem("ateezWorldDemoName");
 
             if (!name) {
+
                 message.textContent =
                     "Este protótipo não possui contas reais. Experimente o cadastro demonstrativo.";
+
                 return;
+
             }
 
             message.textContent = `Olá novamente, ${name}!`;
+
         }
 
         updateAccount();
 
         setTimeout(() => {
-            if (dialog) dialog.close();
+
+            if (dialog) {
+                dialog.close();
+            }
+
         }, 1100);
+
     });
+
 }
 
 
 if (logout) {
+
     logout.addEventListener("click", () => {
+
         sessionStorage.removeItem("ateezWorldDemoName");
+
         updateAccount();
+
     });
+
 }
 
 

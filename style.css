@@ -1,4 +1,3 @@
-
 :root {
     --black: #090909;
     --dark: #15110f;
@@ -403,6 +402,27 @@ button, .primary, .outline {
 .member-card p {
     font-size: 11px;
     color: var(--muted);
+}
+
+/* NOVO: DATA DE NASCIMENTO */
+
+.member-birthday {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 12px;
+    padding: 7px 12px;
+    border: 1px solid rgba(197, 138, 75, 0.45);
+    border-radius: 20px;
+    background: rgba(197, 138, 75, 0.10);
+    color: var(--light);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.member-birthday span {
+    font-size: 14px;
 }
 
 .member-role {
