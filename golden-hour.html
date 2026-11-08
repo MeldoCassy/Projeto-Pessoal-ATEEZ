@@ -1,11 +1,12 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="GOLDEN HOUR : PART.6 — Uma página especial feita por fãs para fãs de ATEEZ.">
+    <meta name="description" content="GOLDEN HOUR : PART.6 — página especial feita por fãs para fãs de ATEEZ.">
 
     <title>GOLDEN HOUR : PART.6 | ATEEZ WORLD</title>
 
@@ -22,54 +23,67 @@
 <body>
 
     <!-- CABEÇALHO -->
-    <header class="site-header">
-        <div class="header-container">
+    <header class="header">
 
-            <a href="index.html" class="logo">
-                ATEEZ <span>WORLD</span>
-            </a>
+        <a href="index.html" class="logo">
+            ✦ ATEEZ <span>WORLD</span>
+        </a>
 
-            <nav class="main-nav">
-                <a href="index.html">Início</a>
-                <a href="#album">Álbum</a>
-                <a href="#countdown">Contagem regressiva</a>
-                <a href="#tracklist">Tracklist</a>
-                <a href="#up">UP</a>
-                <a href="#drip">DRIP MV</a>
-            </nav>
+        <a href="index.html" class="back-link">
+            ← VOLTAR AO ATEEZ WORLD
+        </a>
 
-        </div>
     </header>
 
 
-    <!-- HERO -->
     <main>
 
-        <section class="hero hero-golden">
+        <!-- HERO -->
+        <section class="hero">
 
             <div class="hero-content">
 
-                <span class="eyebrow">
-                    ATEEZ • 15º MINI ÁLBUM
-                </span>
+                <span class="eyebrow">A NEW CHAPTER BEGINS</span>
+
+                <p class="album-number">
+                    ATEEZ · GOLDEN HOUR SERIES
+                </p>
 
                 <h1>
                     GOLDEN HOUR
                     <span>PART.6</span>
                 </h1>
 
-                <p>
-                    Uma nova página na história dos oito piratas.
-                    Uma nova era para ATEEZ e ATINY.
+                <p class="hero-description">
+                    O próximo capítulo da jornada dos oito piratas
+                    está prestes a começar.
                 </p>
 
-                <div class="hero-date">
-                    13.11.2026
+                <div class="release-date">
+
+                    <span>RELEASE DATE</span>
+
+                    <strong>13 NOVEMBER 2026</strong>
+
+                    <small>02:00 · HORÁRIO DE BRASÍLIA</small>
+
                 </div>
 
-                <a href="#countdown" class="hero-button">
-                    Acompanhar o lançamento
+                <a href="#countdown" class="gold-button">
+                    VER CONTAGEM REGRESSIVA ↓
                 </a>
+
+            </div>
+
+            <div class="hero-symbol">
+
+                <span>✦</span>
+
+                <p>
+                    GOLDEN<br>HOUR
+                </p>
+
+                <small>ATEEZ · 2026</small>
 
             </div>
 
@@ -77,216 +91,183 @@
 
 
         <!-- APRESENTAÇÃO -->
-        <section class="section album-intro" id="album">
+        <section class="intro-section">
 
-            <div class="section-heading">
+            <span class="eyebrow">THE GOLDEN HOUR</span>
 
-                <span class="section-label">
-                    THE GOLDEN HOUR
-                </span>
+            <h2>UMA NOVA ERA COMEÇA.</h2>
 
-                <h2>
-                    GOLDEN HOUR : PART.6
-                </h2>
-
-                <p>
-                    O próximo capítulo da jornada musical do ATEEZ.
-                    Cinco faixas para acompanhar mais uma etapa
-                    dessa história.
-                </p>
-
-            </div>
+            <p>
+                Cinco faixas, uma nova jornada e oito artistas
+                que continuam escrevendo sua história.
+                Prepare-se para GOLDEN HOUR : PART.6.
+            </p>
 
         </section>
 
 
         <!-- CONTAGEM REGRESSIVA -->
-        <section class="section countdown-section" id="countdown">
+        <section class="countdown-section" id="countdown">
 
-            <div class="section-heading">
+            <span class="eyebrow">THE FINAL COUNTDOWN</span>
 
-                <span class="section-label">
-                    THE MOMENT IS COMING
-                </span>
+            <h2>A ESPERA ESTÁ CHEGANDO AO FIM.</h2>
 
-                <h2>
-                    CONTAGEM REGRESSIVA
-                </h2>
-
-                <p>
-                    ATINY, estamos chegando!
-                </p>
-
-            </div>
+            <p class="countdown-description">
+                ATINY, preparem-se. Nosso próximo capítulo está quase aqui!
+            </p>
 
             <div class="countdown" id="countdownTimer">
 
-                <div class="countdown-box">
-                    <span id="days">00</span>
-                    <small>DIAS</small>
+                <div class="time-card">
+                    <strong id="days">00</strong>
+                    <span>DIAS</span>
                 </div>
 
-                <div class="countdown-box">
-                    <span id="hours">00</span>
-                    <small>HORAS</small>
+                <div class="time-card">
+                    <strong id="hours">00</strong>
+                    <span>HORAS</span>
                 </div>
 
-                <div class="countdown-box">
-                    <span id="minutes">00</span>
-                    <small>MINUTOS</small>
+                <div class="time-card">
+                    <strong id="minutes">00</strong>
+                    <span>MINUTOS</span>
                 </div>
 
-                <div class="countdown-box">
-                    <span id="seconds">00</span>
-                    <small>SEGUNDOS</small>
+                <div class="time-card">
+                    <strong id="seconds">00</strong>
+                    <span>SEGUNDOS</span>
                 </div>
 
             </div>
 
-            <p class="countdown-status" id="countdownStatus">
-                A contagem continua... ATINY, estamos quase lá!
+            <p class="countdown-status" id="countdownStatus" aria-live="polite">
+                Calculando o tempo restante...
             </p>
 
-            <p class="release-date">
-                13 de novembro de 2026 • 02h00 (Brasília)
+            <p class="release-note">
+                13 de novembro de 2026 · 02h00 · Horário de Brasília
             </p>
 
         </section>
 
 
         <!-- TRACKLIST -->
-        <section class="section tracklist-section" id="tracklist">
+        <section class="tracklist-section" id="tracklist">
 
-            <div class="section-heading">
+            <span class="eyebrow">THE MUSIC</span>
 
-                <span class="section-label">
-                    FIVE TRACKS
-                </span>
+            <h2>TRACKLIST</h2>
 
-                <h2>
-                    TRACKLIST
-                </h2>
-
-                <p>
-                    Conheça as cinco faixas de GOLDEN HOUR : PART.6.
-                </p>
-
-            </div>
+            <p class="section-description">
+                Conheça as cinco faixas de GOLDEN HOUR : PART.6.
+            </p>
 
             <div class="tracklist">
 
-                <article class="track-item">
+                <article class="track">
                     <span class="track-number">01</span>
 
                     <div class="track-info">
                         <h3>ANEMIA</h3>
-                        <span>02:56</span>
+                        <span>TRACK 01</span>
                     </div>
+
+                    <time>2:56</time>
                 </article>
 
 
-                <article class="track-item">
+                <article class="track pre-release">
                     <span class="track-number">02</span>
 
                     <div class="track-info">
                         <h3>DRIP</h3>
-                        <span>03:01</span>
+                        <span>PRE-RELEASE SINGLE</span>
                     </div>
 
-                    <span class="track-tag">
-                        PRE-RELEASE
-                    </span>
+                    <time>3:01</time>
+
+                    <span class="track-tag">OUT NOW</span>
                 </article>
 
 
-                <article class="track-item highlight-track">
+                <article class="track title-track">
                     <span class="track-number">03</span>
 
                     <div class="track-info">
                         <h3>UP</h3>
-                        <span>03:26</span>
+                        <span>TITLE TRACK</span>
                     </div>
 
-                    <span class="track-tag">
-                        TITLE TRACK
-                    </span>
+                    <time>3:26</time>
+
+                    <span class="track-tag">TITLE</span>
                 </article>
 
 
-                <article class="track-item">
+                <article class="track">
                     <span class="track-number">04</span>
 
                     <div class="track-info">
                         <h3>FAITH</h3>
-                        <span>03:28</span>
+                        <span>TRACK 04</span>
                     </div>
+
+                    <time>3:28</time>
                 </article>
 
 
-                <article class="track-item">
+                <article class="track">
                     <span class="track-number">05</span>
 
                     <div class="track-info">
                         <h3>HOLLOW VICTORY</h3>
-                        <span>03:15</span>
+                        <span>TRACK 05</span>
                     </div>
+
+                    <time>3:15</time>
                 </article>
 
             </div>
 
-            <p class="album-duration">
-                Duração total: 16 minutos e 06 segundos
-            </p>
+            <div class="album-total">
+
+                <span>DURAÇÃO TOTAL</span>
+
+                <strong>16:06</strong>
+
+            </div>
 
         </section>
 
 
         <!-- UP -->
-        <section class="section up-section" id="up">
+        <section class="up-section" id="up">
 
-            <div class="up-content">
+            <span class="eyebrow">TITLE TRACK</span>
 
-                <span class="section-label">
-                    TITLE TRACK
-                </span>
+            <h2>UP</h2>
 
-                <h2>
-                    UP
-                </h2>
+            <p>
+                A faixa-título de GOLDEN HOUR : PART.6.
+                Mais um capítulo na jornada musical do ATEEZ.
+            </p>
 
-                <p>
-                    A faixa-título de GOLDEN HOUR : PART.6.
-                    Prepare-se para conhecer mais um capítulo
-                    da discografia do ATEEZ.
-                </p>
-
-                <span class="up-duration">
-                    03:26
-                </span>
-
-            </div>
+            <span class="up-duration">03:26</span>
 
         </section>
 
 
         <!-- DRIP -->
-        <section class="section drip-section" id="drip">
+        <section class="drip-section" id="drip">
 
-            <div class="section-heading">
+            <span class="eyebrow">PRE-RELEASE SINGLE</span>
 
-                <span class="section-label">
-                    PRE-RELEASE SINGLE
-                </span>
+            <h2>DRIP</h2>
 
-                <h2>
-                    DRIP
-                </h2>
-
-                <p>
-                    Reviva o MV oficial de DRIP!
-                </p>
-
-            </div>
+            <p class="drip-description">
+                Reviva o MV oficial de DRIP!
+            </p>
 
             <div class="drip-video-container">
 
@@ -299,15 +280,13 @@
                 >
 
                     <img
-                        src="https://img.youtube.com/vi/iqQWCYMlMw0/maxresdefault.jpg"
+                        src="https://img.youtube.com/vi/iqQWCYMlMw0/hqdefault.jpg"
                         alt="ATEEZ - DRIP Official Music Video"
                         class="drip-thumbnail"
                         loading="lazy"
                     >
 
-                    <span class="play-button" aria-hidden="true">
-                        ▶
-                    </span>
+                    <span class="play-button">▶</span>
 
                 </a>
 
@@ -319,9 +298,9 @@
                     href="https://www.youtube.com/watch?v=iqQWCYMlMw0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="video-button"
+                    class="gold-button"
                 >
-                    Assistir no YouTube
+                    ASSISTIR NO YOUTUBE →
                 </a>
 
             </div>
@@ -330,23 +309,19 @@
 
 
         <!-- ENCERRAMENTO -->
-        <section class="section closing-section">
+        <section class="closing-section">
 
-            <span class="section-label">
-                ETERNAL SUNSHINE
-            </span>
+            <span class="eyebrow">FOR ATINY, WITH LOVE</span>
 
-            <h2>
-                FOR ATINY, WITH LOVE.
-            </h2>
+            <h2>ATEEZ AND ATINY.</h2>
 
             <p>
                 Oito piratas, uma jornada e milhões de corações
                 acompanhando cada capítulo.
             </p>
 
-            <a href="index.html" class="back-button">
-                Voltar ao ATEEZ WORLD
+            <a href="index.html" class="gold-button">
+                VOLTAR AO ATEEZ WORLD
             </a>
 
         </section>
@@ -355,47 +330,40 @@
 
 
     <!-- RODAPÉ -->
-    <footer class="site-footer">
+    <footer>
 
-        <div class="footer-content">
+        <a href="index.html" class="logo">
+            ✦ ATEEZ <span>WORLD</span>
+        </a>
 
-            <h3>ATEEZ WORLD</h3>
+        <p class="footer-description">
+            Conheça os oito piratas.
+            Descubra o universo.
+            Encontre seu lugar como ATINY.
+        </p>
 
-            <p>
-                Conheça os oito piratas.
-                Descubra o universo.
-                Encontre seu lugar como ATINY.
-            </p>
+        <div class="footer-divider"></div>
 
-            <div class="footer-divider"></div>
+        <p class="copyright-notice">
+            Este é um projeto independente, sem fins lucrativos,
+            feito de fãs para fãs. Não somos afiliados, patrocinados
+            ou oficialmente associados à KQ Entertainment ou ao ATEEZ.
+        </p>
 
-            <p class="copyright-notice">
-                Este é um projeto independente, sem fins lucrativos,
-                feito por fãs para fãs. Não somos afiliados,
-                patrocinados ou oficialmente associados à
-                KQ Entertainment ou ao ATEEZ.
-            </p>
+        <p class="copyright-notice">
+            ATEEZ, seus integrantes, músicas, imagens, personagens
+            e demais materiais oficiais pertencem aos seus respectivos
+            titulares de direitos autorais. Todos os direitos são
+            reservados aos seus respectivos proprietários.
+        </p>
 
-            <p class="copyright-notice">
-                ATEEZ, seus integrantes, músicas, imagens,
-                personagens, marcas e demais materiais oficiais
-                pertencem aos seus respectivos titulares de direitos.
-                Todos os direitos sobre esses materiais são reservados
-                aos seus respectivos proprietários, incluindo
-                ATEEZ e KQ Entertainment.
-            </p>
+        <p class="copyright-notice">
+            Não reivindicamos propriedade sobre materiais de terceiros.
+            Os créditos dos conteúdos oficiais pertencem aos seus
+            respectivos titulares.
+        </p>
 
-            <p class="copyright-notice">
-                Não reivindicamos propriedade sobre materiais
-                de terceiros. Os créditos dos conteúdos oficiais
-                pertencem aos seus respectivos titulares.
-            </p>
-
-            <p class="footer-credit">
-                © 2026 ATEEZ WORLD • Fanmade Project
-            </p>
-
-        </div>
+        <small>© 2026 · ATEEZ WORLD — FANMADE PROJECT</small>
 
     </footer>
 

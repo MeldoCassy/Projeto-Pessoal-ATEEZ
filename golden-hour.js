@@ -1,100 +1,148 @@
 
-/* ======================================
-   ATEEZ WORLD
-   GOLDEN HOUR : PART.6
-   COUNTDOWN
-====================================== */
+/* =========================================
+   ATEEZ WORLD — GOLDEN HOUR PART.6
+   CONTAGEM REGRESSIVA
+========================================= */
 
-// Data e horário do lançamento:
-// 13 de novembro de 2026
-// 02:00 da manhã — horário de Brasília
+document.addEventListener("DOMContentLoaded", function () {
 
-const releaseDate = new Date("2026-11-13T02:00:00-03:00");
+    // Lançamento: 13 de novembro de 2026 às 02h
+    // Horário de Brasília: UTC-3
 
-// Elementos HTML
+    const releaseDate = new Date(
+        "2026-11-13T02:00:00-03:00"
+    ).getTime();
 
-const daysElement = document.querySelector("#days");
-const hoursElement = document.querySelector("#hours");
-const minutesElement = document.querySelector("#minutes");
-const secondsElement = document.querySelector("#seconds");
 
-const statusElement = document.querySelector("#countdownStatus");
-const countdownTimer = document.querySelector("#countdownTimer");
+    // ELEMENTOS HTML
 
-// Atualização da contagem regressiva
+    const daysElement = document.getElementById("days");
 
-function updateCountdown() {
+    const hoursElement = document.getElementById("hours");
 
-    const now = new Date();
+    const minutesElement = document.getElementById("minutes");
 
-    const difference = releaseDate.getTime() - now.getTime();
+    const secondsElement = document.getElementById("seconds");
 
-    // Quando o lançamento chegar
+    const statusElement = document.getElementById("countdownStatus");
 
-    if (difference <= 0) {
+    const countdownTimer = document.getElementById("countdownTimer");
 
-        daysElement.textContent = "00";
-        hoursElement.textContent = "00";
-        minutesElement.textContent = "00";
-        secondsElement.textContent = "00";
 
-        statusElement.textContent =
-            "GOLDEN HOUR : PART.6 JÁ ESTÁ DISPONÍVEL!";
+    // VERIFICAR SE OS ELEMENTOS EXISTEM
 
-        countdownTimer.classList.add("released");
+    if (
+        !daysElement ||
+        !hoursElement ||
+        !minutesElement ||
+        !secondsElement ||
+        !statusElement ||
+        !countdownTimer
+    ) {
+
+        console.error(
+            "Erro: elementos da contagem regressiva não encontrados."
+        );
 
         return;
+
     }
 
-    // Cálculo do tempo restante
 
-    const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-    );
+    // FORMATAR NÚMEROS COM DOIS DÍGITOS
 
-    const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-    );
+    function formatNumber(number) {
 
-    const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-    );
+        return String(number).padStart(2, "0");
 
-    const seconds = Math.floor(
-        (difference / 1000) % 60
-    );
+    }
 
-    // Exibição dos números
 
-    daysElement.textContent = String(days).padStart(2, "0");
+    // ATUALIZAR CONTAGEM
 
-    hoursElement.textContent = String(hours).padStart(2, "0");
+    function updateCountdown() {
 
-    minutesElement.textContent = String(minutes).padStart(2, "0");
+        const now = Date.now();
 
-    secondsElement.textContent = String(seconds).padStart(2, "0");
+        const difference = releaseDate - now;
 
-    statusElement.textContent =
-        "A contagem continua... ATINY, estamos quase lá!";
 
-}
+        // QUANDO O LANÇAMENTO CHEGAR
 
-// Executa imediatamente
+        if (difference <= 0) {
 
-updateCountdown();
+            daysElement.textContent = "00";
 
-// Atualiza a cada segundo
+            hoursElement.textContent = "00";
 
-const countdownInterval = setInterval(() => {
+            minutesElement.textContent = "00";
+
+            secondsElement.textContent = "00";
+
+            statusElement.textContent =
+                "GOLDEN HOUR : PART.6 JÁ ESTÁ DISPONÍVEL!";
+
+            countdownTimer.classList.add("released");
+
+            clearInterval(countdownInterval);
+
+            return;
+
+        }
+
+
+        // CALCULAR TEMPO RESTANTE
+
+        const days = Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (difference / (1000 * 60 * 60)) % 24
+        );
+
+        const minutes = Math.floor(
+            (difference / (1000 * 60)) % 60
+        );
+
+        const seconds = Math.floor(
+            (difference / 1000) % 60
+        );
+
+
+        // MOSTRAR NA PÁGINA
+
+        daysElement.textContent = formatNumber(days);
+
+        hoursElement.textContent = formatNumber(hours);
+
+        minutesElement.textContent = formatNumber(minutes);
+
+        secondsElement.textContent = formatNumber(seconds);
+
+
+        statusElement.textContent =
+            "ATINY, estamos quase lá!";
+
+    }
+
+
+    // EXECUTAR IMEDIATAMENTE
 
     updateCountdown();
 
-    // Para o intervalo quando o álbum for lançado
 
-    if (new Date().getTime() >= releaseDate.getTime()) {
+    // ATUALIZAR A CADA SEGUNDO
 
-        clearInterval(countdownInterval);
+    const countdownInterval = setInterval(function () {
 
-    }
+        updateCountdown();
 
-}, 1000);
+    }, 1000);
+
+
+    console.log(
+        "GOLDEN HOUR : PART.6 — Contagem regressiva iniciada! 🏴‍☠️"
+    );
+
+});
